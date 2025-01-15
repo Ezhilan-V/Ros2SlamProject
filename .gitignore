@@ -1,0 +1,17 @@
+# ROS2 build directories
+/build/
+/install/
+/log/
+
+# Temporary files
+*.swp
+*.swo
+
+# Environment files
+*.yaml
+*.pgm
+
+# Bag files
+*.db3
+*.bag
+*.pcd
