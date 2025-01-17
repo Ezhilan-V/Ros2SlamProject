@@ -133,44 +133,44 @@
             </geometry>
         </collision>
         <inertial>
-            <mass value="0.114" />
-            <origin xyz="0 0 0" />
-            <inertia ixx="0.001" ixy="0.0" ixz="0.0"
-                     iyy="0.001" iyz="0.0"
-                     izz="0.001" />
+            <mass value="0.114"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                    iyy="0.001" iyz="0"
+                    izz="0.001"/>
         </inertial>
     </link>
+
 
     <!-- 3D LIDAR Joint & Link -->
-    <joint name="lidar_3d_joint" type="fixed">
-        <parent link="base_link"/>
-        <child link="lidar_3d"/>
-        <origin xyz="-0.064 0 0.222" rpy="0 0 0"/>
-    </joint>
+<joint name="lidar_3d_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_3d"/>
+    <origin xyz="-0.064 0 0.222" rpy="0 0 0"/>
+</joint>
 
-    <link name="lidar_3d">
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <cylinder radius="0.03" length="0.05"/>
-            </geometry>
-            <material name="dark"/>
-        </visual>
-        <collision>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <cylinder radius="0.03" length="0.05"/>
-            </geometry>
-        </collision>
-        <inertial>
-            <mass value="0.12"/>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <inertia ixx="0.000133333" ixy="0" ixz="0"
-                     iyy="0.000133333" iyz="0"
-                     izz="0.0000675"/>
-        </inertial>
-    </link>
-
+<link name="lidar_3d">
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.03" length="0.05"/>
+        </geometry>
+        <material name="dark"/>
+    </visual>
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.03" length="0.05"/>
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.12"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-4" ixy="1e-5" ixz="1e-5"
+                 iyy="1e-4" iyz="1e-5"
+                 izz="5e-5"/>
+    </inertial>
+</link>
     <!-- Define materials -->
     <material name="black">
         <color rgba="0.0 0.0 0.0 1.0"/>

@@ -1,7 +1,7 @@
 # ROS2 build directories
-/build/
-/install/
-/log/
+/build
+/install
+/log
 
 # Temporary files
 *.swp
@@ -15,3 +15,5 @@
 *.db3
 *.bag
 *.pcd
+*.png
+*.gif

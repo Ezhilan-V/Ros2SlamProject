@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ez/Project/test/lio_sam_gazebo_ros2/install/velodyne_gazebo_plugins/include/**",
+        "/home/ez/Project/test/lio_sam_gazebo_ros2/install/lio_sam/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/ez/Project/test/lio_sam_gazebo_ros2/src/LIO-SAM-ros2/include/**",
+        "/home/ez/Project/test/lio_sam_gazebo_ros2/src/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
