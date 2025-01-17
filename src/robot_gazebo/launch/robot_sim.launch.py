@@ -31,11 +31,17 @@ def generate_launch_description():
             ),
         ),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(pkg_cart_pole_control, 'launch', 'robot_control.launch.py')
-            ),
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(
+        #         os.path.join(pkg_cart_pole_control, 'launch', 'robot_control.launch.py')
+        #     ),
+        # ),
+
+        # # Launch keyboard control in new terminal
+        # ExecuteProcess(
+        #     cmd=['xterm', '-e', 'ros2', 'launch', 'robot_control', 'keyboard_control.launch.py'],
+        #     output='screen'
+        # ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher.launch.py']),

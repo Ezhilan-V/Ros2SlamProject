@@ -14,6 +14,6 @@
 # Bag files
 *.db3
 *.bag
-*.pcd
+# *.pcd
 *.png
 *.gif

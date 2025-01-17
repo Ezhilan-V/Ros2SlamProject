@@ -20,6 +20,13 @@ find_package(ament_cmake REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav2_bringup REQUIRED)
+find_package(tf2_ros REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -44,6 +51,8 @@ install(
   PROGRAMS
   scripts/robot_control.py
   launch/robot_control.launch.py
+  scripts/keyboard_control.py
+  launch/keyboard_control.launch.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
