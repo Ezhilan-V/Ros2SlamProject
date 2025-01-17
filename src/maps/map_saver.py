@@ -43,7 +43,7 @@ class DirectMapSaver(Node):
         
         # Remove small objects
         num_labels, labels = cv2.connectedComponents(cleaned)
-        min_size = 10
+        min_size = 75
         
         for label in range(1, num_labels):
             if np.sum(labels == label) < min_size:
@@ -84,14 +84,15 @@ class DirectMapSaver(Node):
         
     def cloud_callback(self, msg):
         self.get_logger().info('Processing point cloud...')
-        
+
+
         try:
             # Extract points
             x_coords = []
             y_coords = []
             
             for p in pc2.read_points(msg, field_names=("x", "y", "z"), skip_nans=True):
-                if abs(float(p[2])) <= self.height_threshold:
+                if abs(float(p[2])) <= self.height_threshold and float(p[2]) > 0.25:  # Add height check
                     x_coords.append(float(p[0]))
                     y_coords.append(float(p[1]))
             
@@ -143,7 +144,7 @@ class DirectMapSaver(Node):
             cleaned_data = self.clean_map(grid_data, width, height)
             
             # Save the map
-            self.save_map(cleaned_data, width, height, min_x, min_y, 'clean_map')
+            self.save_map(cleaned_data, width, height, min_x, min_y, 'map50')
             
             self.get_logger().info('Map saved successfully')
             
