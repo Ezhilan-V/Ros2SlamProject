@@ -30,6 +30,11 @@ def generate_launch_description():
                 os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')
             ),
         ),
+               IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')
+            ),
+        ),
 
         # IncludeLaunchDescription(
         #     PythonLaunchDescriptionSource(
