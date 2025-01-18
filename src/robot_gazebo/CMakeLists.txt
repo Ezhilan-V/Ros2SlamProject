@@ -38,6 +38,8 @@ install(
     models
     urdf
     worlds
+    maps
+    config
   DESTINATION
     share/${PROJECT_NAME}/
 )
